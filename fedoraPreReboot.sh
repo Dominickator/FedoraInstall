@@ -1,9 +1,9 @@
 #!/bin/bash
 
 echo "Configuring DNF..."
-sudo echo "max_parallel_downloads=20" > /etc/dnf/dnf.conf
-sudo echo "defaultyes=True" > /etc/dnf/dnf.conf
-sudo echo "keepcache=True" > /etc/dnf/dnf.conf
+sudo sh -c 'echo "max_parallel_downloads=20" >>/etc/dnf/dnf.conf'
+sudo sh -c 'echo "defaultyes=True" >>/etc/dnf/dnf.conf'
+sudo sh -c 'echo "keepcache=True" >>/etc/dnf/dnf.conf'
 
 #Updating necessary components and restarting
 echo "Updating and rebooting... Run 'fedoraPostReboot.sh'"
