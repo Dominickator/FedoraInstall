@@ -23,8 +23,19 @@ make
 sudo make install
 
 #Installing VSCode
-echo "Installing vscode..."
+echo "Installing VSCode..."
 cd 
 cd Downloads
 wget https://code.visualstudio.com/sha/download?build=stable&os=linux-rpm-x64
 sudo rpm -i *.rpm
+
+#Enable RPM Fusion
+echo "Enabling RPM Fusion..."
+sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+
+#Switch to mesa freeworld
+echo "Switching to Mesa Freeworld..."
+sudo dnf swap mesa-va-drivers mesa-va-drivers-freeworld
+sudo dnf swap mesa-vdpau-drivers mesa-vdpau-drivers-freeworld
+sudo dnf5 install google-chrome-stable
