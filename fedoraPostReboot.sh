@@ -39,3 +39,9 @@ echo "Switching to Mesa Freeworld..."
 sudo dnf swap mesa-va-drivers mesa-va-drivers-freeworld
 sudo dnf swap mesa-vdpau-drivers mesa-vdpau-drivers-freeworld
 sudo dnf5 install google-chrome-stable
+
+#Updating and rebooting
+echo "Updating and rebooting..."
+sudo dnf5 update
+sudo dnf5 upgrade
+reboot
