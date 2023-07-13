@@ -9,5 +9,5 @@ sudo sh -c 'echo "keepcache=True" >>/etc/dnf/dnf.conf'
 echo "Updating and rebooting... Run 'fedoraPostReboot.sh'"
 sudo dnf install dnf5
 sudo dnf5 update
-sudo dnf5 install cabextract curl dkms gnome-tweaks adw-gtk3-theme
+sudo dnf5 install cabextract curl dkms gnome-tweaks adw-gtk3-theme kgx
 reboot
