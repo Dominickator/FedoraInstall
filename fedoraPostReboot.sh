@@ -14,14 +14,13 @@ flatpak install flathub com.mattjakeman.ExtensionManager
 
 #Installing xone and headsetControl
 echo "Installing xone and headsetcontrol..."
-cd Documents
+cd ~/Documents
 git clone https://github.com/medusalix/xone
 cd xone
 sudo ./install.sh --release
 sudo xone-get-firmware.sh
 
-cd
-cd Documents
+cd ~/Documents
 sudo dnf5 install cmake hidapi-devel g++
 git clone https://github.com/Sapd/HeadsetControl && cd HeadsetControl
 mkdir build && cd build
