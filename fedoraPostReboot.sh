@@ -8,8 +8,9 @@ sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfre
 sudo dnf config-manager --set-enabled google-chrome
 
 echo "Installing applications..."
+sudo dnf5 update --refresh
 sudo dnf5 install git steam lutris
-flatpak install flathub com.discordapp.Discord -y
+sudo dnf5 install discord
 flatpak install flathub com.mattjakeman.ExtensionManager
 
 #Installing xone and headsetControl
