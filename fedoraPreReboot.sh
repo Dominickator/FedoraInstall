@@ -5,6 +5,10 @@ sudo sh -c 'echo "max_parallel_downloads=20" >>/etc/dnf/dnf.conf'
 sudo sh -c 'echo "defaultyes=True" >>/etc/dnf/dnf.conf'
 sudo sh -c 'echo "keepcache=True" >>/etc/dnf/dnf.conf'
 
+#Installing gnome console
+echo "Installing GNOME Console..."
+sudo dnf install gnome-console
+
 #Updating necessary components and restarting
 echo "Updating and rebooting... Run 'fedoraPostReboot.sh'"
 sudo dnf install dnf5
