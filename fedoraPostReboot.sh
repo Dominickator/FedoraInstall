@@ -5,13 +5,12 @@ echo "Enabling RPM Fusion..."
 sudo dnf install fedora-workstation-repositories
 sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
 sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-sudo dnf config-manager --set-enabled google-chrome
 
 echo "Installing applications..."
-sudo dnf5 update --refresh
 sudo dnf5 install git steam lutris
 sudo dnf5 install discord
-flatpak install flathub com.mattjakeman.ExtensionManager
+flatpak install flathub com.mattjakeman.ExtensionManager -y
+flatpak install flathub com.microsoft.Edge -y
 
 #Installing xone and headsetControl
 echo "Installing xone and headsetcontrol..."
@@ -41,7 +40,6 @@ sudo dnf install code
 echo "Switching to Mesa Freeworld..."
 sudo dnf swap mesa-va-drivers mesa-va-drivers-freeworld
 sudo dnf swap mesa-vdpau-drivers mesa-vdpau-drivers-freeworld
-sudo dnf5 install google-chrome-stable
 
 #Updating and rebooting
 echo "Updating and rebooting..."
