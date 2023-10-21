@@ -10,7 +10,7 @@ echo "Installing applications..."
 sudo dnf5 install git steam lutris
 sudo dnf5 install discord
 flatpak install flathub com.mattjakeman.ExtensionManager -y
-flatpak install flathub com.microsoft.Edge -y
+flatpak install flathub com.microsoft.EdgeDev -y
 
 #Installing xone and headsetControl
 echo "Installing xone and headsetcontrol..."
