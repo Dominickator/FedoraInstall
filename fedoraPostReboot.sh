@@ -10,7 +10,7 @@ echo "Installing applications..."
 sudo dnf5 install git steam lutris
 flatpak install flathub com.mattjakeman.ExtensionManager -y
 flatpak install flathub com.microsoft.EdgeDev -y
-flatpak install discord -y
+flatpak install flathub com.discordapp.Discord -y
 
 #Enabling discord permissions
 mkdir -p ~/.config/user-tmpfiles.d
