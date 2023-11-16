@@ -8,9 +8,14 @@ sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfre
 
 echo "Installing applications..."
 sudo dnf5 install git steam lutris
-sudo dnf5 install discord
 flatpak install flathub com.mattjakeman.ExtensionManager -y
 flatpak install flathub com.microsoft.EdgeDev -y
+flatpak install discord -y
+
+#Enabling discord permissions
+mkdir -p ~/.config/user-tmpfiles.d
+echo 'L %t/discord-ipc-0 - - - - app/com.discordapp.Discord/discord-ipc-0' > ~/.config/user-tmpfiles.d/discord-rpc.conf
+systemctl --user enable --now systemd-tmpfiles-setup.service
 
 #Installing xone and headsetControl
 echo "Installing xone and headsetcontrol..."
