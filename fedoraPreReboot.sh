@@ -13,6 +13,9 @@ sudo dnf install gnome-console
 echo "Updating and rebooting... Run 'fedoraPostReboot.sh'"
 sudo dnf install dnf5
 sudo dnf5 install cabextract curl dkms gnome-tweaks adw-gtk3-theme kgx
+sudo dnf install gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel
+sudo dnf install lame* --exclude=lame-devel
+sudo dnf group upgrade --with-optional Multimedia
 sudo dnf copr enable trixieua/mutter-patched -y && sudo dnf update --refresh
 sudo mount /dev/sda2 /mnt
 cd /mnt/Windows/Fonts
