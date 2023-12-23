@@ -17,7 +17,7 @@ sudo dnf install gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-open
 sudo dnf install lame* --exclude=lame-devel
 sudo dnf group upgrade --with-optional Multimedia
 sudo dnf copr enable trixieua/mutter-patched -y && sudo dnf update --refresh
-sudo mount /dev/sda2 /mnt
+sudo mount /dev/nvme0n1p3 /mnt
 cd /mnt/Windows/Fonts
 sudo cp -r * /usr/share/fonts
 sudo fc-cache -fv
