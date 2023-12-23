@@ -10,13 +10,7 @@ echo "Installing applications..."
 sudo dnf5 install git steam lutris
 flatpak install flathub com.mattjakeman.ExtensionManager -y
 flatpak install flathub com.microsoft.EdgeDev -y
-flatpak install flathub com.discordapp.Discord -y
-flatpak run com.discordapp.Discord
-
-#Enabling discord permissions
-mkdir -p ~/.config/user-tmpfiles.d
-echo 'L %t/discord-ipc-0 - - - - app/com.discordapp.Discord/discord-ipc-0' > ~/.config/user-tmpfiles.d/discord-rpc.conf
-systemctl --user enable --now systemd-tmpfiles-setup.service
+flatpak install flathub io.github.gamingdoom.Datcord -y
 
 #Installing xone and headsetControl
 echo "Installing xone and headsetcontrol..."
