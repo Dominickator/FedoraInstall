@@ -12,6 +12,13 @@ flatpak install flathub com.mattjakeman.ExtensionManager -y
 flatpak install flathub com.microsoft.EdgeDev -y
 flatpak install flathub dev.vencord.Vesktop -y
 
+echo "Installing codecs..."
+sudo dnf swap ffmpeg-free ffmpeg --allowerasing
+sudo dnf groupupdate multimedia --setop="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin
+sudo dnf groupupdate sound-and-video
+sudo dnf install rpmfusion-nonfree-release-tainted
+sudo dnf --repo=rpmfusion-nonfree-tainted install "*-firmware"
+
 #Installing xone and headsetControl
 echo "Installing xone and headsetcontrol..."
 cd ~/Documents
