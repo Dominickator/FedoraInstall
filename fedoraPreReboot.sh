@@ -11,6 +11,7 @@ sudo dnf install gnome-console
 
 #Updating necessary components and restarting
 echo "Updating and rebooting... Run 'fedoraPostReboot.sh'"
+sudo systemctl disable NetworkManager-wait-online.service
 sudo dnf install dnf5
 sudo dnf5 install cabextract curl dkms gnome-tweaks adw-gtk3-theme kgx
 sudo dnf copr enable trixieua/mutter-patched -y && sudo dnf update --refresh
