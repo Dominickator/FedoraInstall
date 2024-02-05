@@ -11,8 +11,8 @@ sudo dnf5 install git steam lutris --assumeyes
 flatpak install flathub com.mattjakeman.ExtensionManager -y
 flatpak install flathub com.microsoft.EdgeDev -y
 cd ~/Downloads
-curl --progress-bar -o vesktop.rpm
-sudo rpm -ivh vesktop.rpm
+curl -LJO https://github.com/Vencord/Vesktop/releases/download/v1.5.0/vesktop-1.5.0.x86_64.rpm
+sudo rpm -ivh *.rpm
 
 echo "Installing codecs..."
 sudo dnf swap ffmpeg-free ffmpeg --allowerasing --assumeyes
