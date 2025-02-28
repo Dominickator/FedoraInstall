@@ -20,7 +20,8 @@ cd /mnt/Windows/Fonts
 sudo cp -r * /usr/share/fonts
 sudo fc-cache -fv
 sudo ln -sf /usr/share/fontconfig/conf.avail/11-lcdfilter-default.conf /etc/fonts/conf.d/
-echo "FREETYPE_PROPERTIES="cff:no-stem-darkening=0 autofitter:no-stem-darkening=0"" | sudo tee -a /etc/environment > /dev/null
+bash <(curl -s -L https://maximilionus.github.io/lucidglyph/wrapper.sh) \
+    install
 sudo dnf5 update --assumeyes
 sudo dnf5 upgrade --assumeyes
 reboot
